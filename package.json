@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node app.js",
-    "build": "My_New_Build"
+    "build": "Build_it"
   },
   "dependencies": {
     "express": "^4.17.1"
