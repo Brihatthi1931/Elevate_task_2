@@ -1,5 +1,15 @@
-FROM python:3.10
+FROM node:14
+
 WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
 COPY . .
-RUN pip install -r requirements.txt
-CMD ["python", "app.py"]
+
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
